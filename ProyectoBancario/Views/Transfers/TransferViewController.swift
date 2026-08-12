@@ -15,3 +15,11 @@ class TransferViewController: UIViewController {
     }
     
 }
+
+extension TransferViewController {
+    static func build() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "TransferViewControllerID")
+        return viewController
+    }
+}

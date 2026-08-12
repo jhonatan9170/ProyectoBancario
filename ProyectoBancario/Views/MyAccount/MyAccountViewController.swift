@@ -15,3 +15,11 @@ class MyAccountViewController: UIViewController {
     }
     
 }
+
+extension MyAccountViewController {
+    static func build() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "MyAccountViewControllerID")
+        return viewController
+    }
+}

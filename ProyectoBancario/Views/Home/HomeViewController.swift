@@ -14,4 +14,13 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .cyan
     }
     
+
+}
+
+extension HomeViewController {
+    static func build() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewControllerID")
+        return viewController
+    }
 }

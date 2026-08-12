@@ -49,8 +49,8 @@ class LoginViewController: UIViewController {
         
         switch result {
         case .valid:
-            break
-            // TODO
+            let vc = SecondStepViewController.build(document: documentTxtF.text ?? "")
+            navigationController?.pushViewController(vc, animated: true)
         case .invalid(let message):
             let alert = UIAlertController(
                 title: "Error",
