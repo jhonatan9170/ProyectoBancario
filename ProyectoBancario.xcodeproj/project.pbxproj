@@ -15,28 +15,16 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				Views/MyAccount/MyAccountViewController.swift,
 			);
 			target = 032DFAE03028E0C600214C2E /* ProyectoBancario */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		03665BAD302BDB4F00C5B093 /* Exceptions for "ProyectoBancario" folder in "Copy Bundle Resources" phase from "ProyectoBancario" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 032DFADF3028E0C600214C2E /* Resources */;
-			membershipExceptions = (
-				Views/MyAccount/MyAccountViewController.swift,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		032DFAE33028E0C600214C2E /* ProyectoBancario */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				032DFAF33028E0C700214C2E /* Exceptions for "ProyectoBancario" folder in "ProyectoBancario" target */,
-				03665BAD302BDB4F00C5B093 /* Exceptions for "ProyectoBancario" folder in "Copy Bundle Resources" phase from "ProyectoBancario" target */,
 			);
 			path = ProyectoBancario;
 			sourceTree = "<group>";

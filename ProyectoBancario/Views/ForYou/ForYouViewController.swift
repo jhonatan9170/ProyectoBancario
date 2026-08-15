@@ -15,3 +15,10 @@ class ForYouViewController: UIViewController {
     }
     
 }
+
+extension ForYouViewController {
+    static func build() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "ForYouViewControllerID")
+    }
+}

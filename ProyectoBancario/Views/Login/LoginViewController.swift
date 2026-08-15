@@ -40,7 +40,8 @@ class LoginViewController: UIViewController {
         
         switch result {
         case .success:
-            // TODO : Go to next Page
+            let vc = SecondStepViewController.build(document: documentTxtF.text ?? "")
+            navigationController?.pushViewController(vc, animated: true)
             break
         case .failure(message: let message):
             showAlert(message: message)

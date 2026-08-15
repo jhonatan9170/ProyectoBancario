@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class SecondStepViewController: UIViewController {
     
@@ -16,16 +17,54 @@ class SecondStepViewController: UIViewController {
     @IBOutlet weak var forgotPasswordLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     
+    private var cancellables: Set<AnyCancellable> = []
+    
+    var viewModel: SecondStepViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Iniciar sesión"
+        
+        avatarLogoImg.image = UIImage(named: "avatarLogo")
+        changeUserButton.setTitle("Cambiar usuario", for: .normal)
+        forgotPasswordLabel.text = "¿Olvidaste tu contraseña?"
+        nextButton.setTitle("Iniciar sesión", for: .normal)
+        passwordTextField.placeholder = "Ingresa tu clave digital"
+        documentLabel.text = viewModel.document
+        
+        viewModel.$succes
+            .sink { succes in
+                guard let succes else { return }
+                if succes {
+                    self.view.window?.rootViewController = BankTabViewController()
+                } else {
+                    self.showAlert(message: "Error")
+                }
+            }
+            .store(in: &cancellables)
     }
     
     @IBAction func changeUserButtonAction(_ sender: Any) {
-        
+        navigationController?.popViewController(animated: false)
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        
+        viewModel.password = passwordTextField.text ?? ""
+        Task {
+            await viewModel.login()
+        }
     }
     
+}
+
+extension SecondStepViewController {
+    static func build(document: String) -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SecondStepViewControllerID") as? SecondStepViewController
+        let viewModel = SecondStepViewModel()
+        viewModel.document = document
+        vc?.viewModel = viewModel
+        return vc!
+    }
 }
