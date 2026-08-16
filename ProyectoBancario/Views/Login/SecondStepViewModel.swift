@@ -36,6 +36,7 @@ class SecondStepViewModel {
             succes = true
             UserDefaults.standard.set(response.usuario.dni, forKey: "dni")
             UserDefaults.standard.set(response.usuario.nombres, forKey: "name")
+            UserDefaults.standard.set(response.token, forKey: "token")
         } else {
             succes = false
         }
