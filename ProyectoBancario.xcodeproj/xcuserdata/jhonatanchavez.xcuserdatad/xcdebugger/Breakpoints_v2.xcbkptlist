@@ -100,5 +100,135 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "932C4E6D-3A6F-48C7-8ABF-B8C4DC522C54"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProyectoBancario/Views/BankTabBar/BankTabViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "BankTabViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "932C4E6D-3A6F-48C7-8ABF-B8C4DC522C54 - 4543f877f7c99d83"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoBancario.BankTabViewController.__allocating_init(tabs: Swift.Array&lt;__C.UITab&gt;) -&gt; ProyectoBancario.BankTabViewController"
+                  moduleName = "ProyectoBancario.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhonatanchavez/Documents/ProyectoBancario/ProyectoBancario/Views/BankTabBar/BankTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10">
+               </Location>
+               <Location
+                  uuid = "932C4E6D-3A6F-48C7-8ABF-B8C4DC522C54 - ac4bedc067a2391a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoBancario.BankTabViewController.init(tabs: Swift.Array&lt;__C.UITab&gt;) -&gt; ProyectoBancario.BankTabViewController"
+                  moduleName = "ProyectoBancario.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhonatanchavez/Documents/ProyectoBancario/ProyectoBancario/Views/BankTabBar/BankTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10">
+               </Location>
+               <Location
+                  uuid = "932C4E6D-3A6F-48C7-8ABF-B8C4DC522C54 - 5a6648ca0e8e1e0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoBancario.BankTabViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProyectoBancario.BankTabViewController"
+                  moduleName = "ProyectoBancario.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhonatanchavez/Documents/ProyectoBancario/ProyectoBancario/Views/BankTabBar/BankTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10">
+               </Location>
+               <Location
+                  uuid = "932C4E6D-3A6F-48C7-8ABF-B8C4DC522C54 - eff85293adb4d775"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoBancario.BankTabViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; ProyectoBancario.BankTabViewController"
+                  moduleName = "ProyectoBancario.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhonatanchavez/Documents/ProyectoBancario/ProyectoBancario/Views/BankTabBar/BankTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10">
+               </Location>
+               <Location
+                  uuid = "932C4E6D-3A6F-48C7-8ABF-B8C4DC522C54 - b424e701c264baa5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoBancario.BankTabViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProyectoBancario.BankTabViewController&gt;"
+                  moduleName = "ProyectoBancario.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhonatanchavez/Documents/ProyectoBancario/ProyectoBancario/Views/BankTabBar/BankTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10">
+               </Location>
+               <Location
+                  uuid = "932C4E6D-3A6F-48C7-8ABF-B8C4DC522C54 - 75c4d3cd2d73ceb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoBancario.BankTabViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProyectoBancario.BankTabViewController&gt;"
+                  moduleName = "ProyectoBancario.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhonatanchavez/Documents/ProyectoBancario/ProyectoBancario/Views/BankTabBar/BankTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10">
+               </Location>
+               <Location
+                  uuid = "932C4E6D-3A6F-48C7-8ABF-B8C4DC522C54 - 7c983259fdc87b25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoBancario.BankTabViewController.__isolated_deallocating_deinit"
+                  moduleName = "ProyectoBancario.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhonatanchavez/Documents/ProyectoBancario/ProyectoBancario/Views/BankTabBar/BankTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10">
+               </Location>
+               <Location
+                  uuid = "932C4E6D-3A6F-48C7-8ABF-B8C4DC522C54 - bbb8ef0c20cf0de6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoBancario.BankTabViewController.__deallocating_deinit"
+                  moduleName = "ProyectoBancario.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jhonatanchavez/Documents/ProyectoBancario/ProyectoBancario/Views/BankTabBar/BankTabViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import SwiftUI
 
 class MyAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view = UIHostingController(rootView: ProfileView()).view
         // Do any additional setup after loading the view.
     }
     
