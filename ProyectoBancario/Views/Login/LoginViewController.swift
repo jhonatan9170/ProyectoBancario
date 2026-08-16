@@ -18,6 +18,10 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let savedDocument = viewModel.savedDocument {
+            let vc = SecondStepViewController.build(document: savedDocument)
+            navigationController?.pushViewController(vc, animated: true)
+        }
         setupUI()
     }
     

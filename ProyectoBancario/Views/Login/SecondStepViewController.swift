@@ -24,7 +24,7 @@ class SecondStepViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Iniciar sesión"
         avatarLogoImg.image = UIImage(named: "avatarLogo")
-        documentLabel.text = viewModel?.document
+        documentLabel.text = viewModel?.name
         changeUserButton.setTitle("Cambiar de usuario", for: .normal)
         passwordTextField.placeholder = "Contraseña"
         forgotPasswordLabel.text = "¿Olvidaste tu contraseña?"

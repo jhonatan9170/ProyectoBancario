@@ -7,4 +7,12 @@
 
 struct LoginResponseModel: Codable {
     let token: String
+    let usuario: UserLoginResponse
+}
+
+struct UserLoginResponse: Codable {
+    let id: Int
+    let dni: String
+    let nombres: String
+    let apellidos: String
 }
