@@ -18,7 +18,7 @@ class HomeViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Hola " + (UserDefaults.standard.string(forKey: "name") ?? "")
+        setupNavigationBar()
         view.backgroundColor = UIColor(named: "gray3")
         backgroundView.backgroundColor = UIColor(named: "bluePrimary")
         backgroundView.layer.cornerRadius = 24
@@ -32,6 +32,15 @@ class HomeViewController: UIViewController{
                 self.tableView.reloadData()
             }
             .store(in: &cancellables)
+    }
+    
+    private func setupNavigationBar() {
+        self.navigationItem.title = "Hola " + (UserDefaults.standard.string(forKey: "name") ?? "")
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = UIColor(named: "bluePrimary")
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     private func setupTableView(){
