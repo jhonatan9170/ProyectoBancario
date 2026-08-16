@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import WebKit
 
 class ForYouViewController: UIViewController {
     
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        let url = URL(string: "https://beneficios.sip.pe/")!
+        webView.load(URLRequest(url: url))
     }
     
 }

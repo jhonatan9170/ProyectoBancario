@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view = UIHostingController(rootView: ProfileView()).view
     }
     
 }
