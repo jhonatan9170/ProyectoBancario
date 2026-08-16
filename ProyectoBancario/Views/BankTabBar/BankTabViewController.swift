@@ -18,10 +18,15 @@ class BankTabViewController: UITabBarController {
         let foryouVC = ForYouViewController.build()
         let myaccountVc = MyAccountViewController.build()
         
-        homeNavigationController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
-        transferVc.tabBarItem = UITabBarItem(title: "Operaciones", image: UIImage(systemName: "arrow.left.arrow.right.circle.fill"), tag: 1)
-        foryouVC.tabBarItem = UITabBarItem(title: "Para ti", image: UIImage(systemName: "gift"), tag: 2)
-        myaccountVc.tabBarItem = UITabBarItem(title: "Mi cuenta", image: UIImage(systemName: "person.crop.circle"), tag: 3)
+        homeNavigationController.tabBarItem =
+        UITabBarItem(title: "Home",
+                     image: UIImage(named: "homeIcon"),
+                     tag: 0
+        )
+        transferVc.tabBarItem = UITabBarItem(title: "Operaciones",
+                                             image: UIImage(named: "transferIcon"), tag: 1)
+        foryouVC.tabBarItem = UITabBarItem(title: "Para ti", image: UIImage(named: "forYouIcon"), tag: 2)
+        myaccountVc.tabBarItem = UITabBarItem(title: "Mi cuenta", image: UIImage(named: "profileIcon"), tag: 3)
         
         viewControllers = [
             homeNavigationController,
