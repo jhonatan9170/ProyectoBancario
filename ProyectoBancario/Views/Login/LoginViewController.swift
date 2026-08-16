@@ -18,6 +18,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let dni = viewModel.document {
+            let vc = SecondStepViewController.build(document: dni)
+            navigationController?.pushViewController(vc, animated: true)
+        }
         setupUI()
     }
     
@@ -37,7 +41,6 @@ class LoginViewController: UIViewController {
     @IBAction func nextBtnAction(_ sender: Any) {
         
         let result = viewModel.validateDocument(documentTxtF.text ?? "")
-        
         switch result {
         case .success:
             let vc = SecondStepViewController.build(document: documentTxtF.text ?? "")

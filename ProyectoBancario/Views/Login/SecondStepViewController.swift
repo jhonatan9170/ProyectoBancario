@@ -31,8 +31,7 @@ class SecondStepViewController: UIViewController {
         forgotPasswordLabel.text = "¿Olvidaste tu contraseña?"
         nextButton.setTitle("Iniciar sesión", for: .normal)
         passwordTextField.placeholder = "Ingresa tu clave digital"
-        documentLabel.text = viewModel.document
-        
+        documentLabel.text = viewModel.nombre
         viewModel.$succes
             .sink { succes in
                 guard let succes else { return }

@@ -5,7 +5,10 @@
 //  Created by Jhonatan Chavez on 14/08/26.
 //
 
+//UserDefaults : Guardar data: String,Int,Double,Bool,Data.
+
 import Combine
+import Foundation
 
 class SecondStepViewModel {
     
@@ -13,6 +16,15 @@ class SecondStepViewModel {
     
     var document: String = ""
     var password: String = ""
+    var nombre: String {
+        let name = UserDefaults.standard.string(forKey: "name")
+        if let name {
+            return name
+        } else {
+            return document
+        }
+    }
+
     
     func login() async {
         let bodyRequest = LoginRequest(dni: document, password: password)
@@ -22,6 +34,8 @@ class SecondStepViewModel {
         
         if let response {
             succes = true
+            UserDefaults.standard.set(response.usuario.dni, forKey: "dni")
+            UserDefaults.standard.set(response.usuario.nombres, forKey: "name")
         } else {
             succes = false
         }
