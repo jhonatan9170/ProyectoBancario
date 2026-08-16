@@ -238,13 +238,39 @@
                     <view key="view" contentMode="scaleToFill" id="MuI-NV-aDz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Y9-Dd-alb">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="190"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="y9A-xw-iU2"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V9m-aW-rOb">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YPn-v6-lX2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YPn-v6-lX2" firstAttribute="bottom" secondItem="V9m-aW-rOb" secondAttribute="bottom" id="Con-8v-tsn"/>
+                            <constraint firstItem="3Y9-Dd-alb" firstAttribute="leading" secondItem="MuI-NV-aDz" secondAttribute="leading" id="EpO-6L-zBx"/>
+                            <constraint firstItem="YPn-v6-lX2" firstAttribute="trailing" secondItem="V9m-aW-rOb" secondAttribute="trailing" id="NDY-7e-hr1"/>
+                            <constraint firstItem="V9m-aW-rOb" firstAttribute="leading" secondItem="YPn-v6-lX2" secondAttribute="leading" id="OCz-C1-Pn3"/>
+                            <constraint firstItem="V9m-aW-rOb" firstAttribute="top" secondItem="YPn-v6-lX2" secondAttribute="top" id="SBm-qt-M0U"/>
+                            <constraint firstItem="3Y9-Dd-alb" firstAttribute="top" secondItem="MuI-NV-aDz" secondAttribute="top" id="SWL-09-fb9"/>
+                            <constraint firstAttribute="trailing" secondItem="3Y9-Dd-alb" secondAttribute="trailing" id="fgC-y8-9xy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="productsTableView" destination="V9m-aW-rOb" id="opu-LX-XZ2"/>
+                        <outlet property="roundedView" destination="3Y9-Dd-alb" id="ge1-W3-61z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiM-c6-vrJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239" y="993"/>
+            <point key="canvasLocation" x="238.93129770992365" y="992.95774647887333"/>
         </scene>
     </scenes>
     <resources>

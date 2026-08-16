@@ -12,33 +12,33 @@ class BankTabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let homeViewController = HomeViewController.build()
+        let homeNavController = UINavigationController(rootViewController: HomeViewController.build())
         let transferViewController = TransferViewController.build()
         let forYouViewController = ForYouViewController.build()
         let myAccountViewController = ProfileViewController.build()
         
-        homeViewController.tabBarItem = UITabBarItem(
+        homeNavController.tabBarItem = UITabBarItem(
             title: "Inicio",
-            image: UIImage(systemName: "house"),
+            image: UIImage(named: "homeIcon"),
             tag: 1)
         
         transferViewController.tabBarItem = UITabBarItem(
             title: "Operaciones",
-            image: UIImage(systemName: "transfer"),
+            image: UIImage(named: "transferIcon"),
             tag: 1)
         
         forYouViewController.tabBarItem = UITabBarItem(
             title: "Para ti",
-            image: UIImage(systemName: "gift"),
+            image: UIImage(named: "forYouIcon"),
             tag: 1)
         
         myAccountViewController.tabBarItem = UITabBarItem(
             title: "Mi cuenta",
-            image: UIImage(systemName: "person"),
+            image: UIImage(named: "profileIcon"),
             tag: 1)
 
         viewControllers = [
-            homeViewController,
+            homeNavController,
             transferViewController,
             forYouViewController,
             myAccountViewController
