@@ -12,6 +12,7 @@ class HomeViewController: UIViewController{
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundView: UIView!
+    let spiner = UIActivityIndicatorView(style: .large)
     
     private let viewModel = HomeViewModel()
     private var cancellables = Set<AnyCancellable>()
@@ -23,6 +24,7 @@ class HomeViewController: UIViewController{
         backgroundView.backgroundColor = UIColor(named: "bluePrimary")
         backgroundView.layer.cornerRadius = 24
         setupTableView()
+        addSpinner()
         Task {
             await viewModel.getProcedures()
         }
@@ -30,6 +32,7 @@ class HomeViewController: UIViewController{
             .receive(on: DispatchQueue.main)
             .sink { _ in
                 self.tableView.reloadData()
+                self.removeSpiner()
             }
             .store(in: &cancellables)
     }
@@ -51,6 +54,18 @@ class HomeViewController: UIViewController{
         tableView.rowHeight = 70
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
+    }
+    
+    func addSpinner() {
+        spiner.center = view.center
+        view.alpha = 0.65
+        view.addSubview(spiner)
+        spiner.startAnimating()
+    }
+    
+    func removeSpiner() {
+        spiner.removeFromSuperview()
+        view.alpha = 1
     }
     
 }

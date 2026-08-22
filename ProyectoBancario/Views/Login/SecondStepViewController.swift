@@ -17,6 +17,8 @@ class SecondStepViewController: UIViewController {
     @IBOutlet weak var forgotPasswordLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     
+    let spiner = UIActivityIndicatorView(style: .large)
+    
     private var cancellables: Set<AnyCancellable> = []
     
     var viewModel: SecondStepViewModel!
@@ -49,10 +51,24 @@ class SecondStepViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        addSpinner()
         viewModel.password = passwordTextField.text ?? ""
         Task {
             await viewModel.login()
+            removeSpiner()
         }
+    }
+    
+    func addSpinner() {
+        spiner.center = view.center
+        view.alpha = 0.65
+        view.addSubview(spiner)
+        spiner.startAnimating()
+    }
+    
+    func removeSpiner() {
+        spiner.removeFromSuperview()
+        view.alpha = 1
     }
     
 }

@@ -4,7 +4,8 @@
 //
 //  Created by Jhonatan Chavez on 14/08/26.
 //
-
+// VIEW <-> ViewModel <-> Model
+//  VIEW <-> ViewModel <-> UseCase <-> Model
 //UserDefaults : Guardar data: String,Int,Double,Bool,Data.
 
 import Combine
@@ -24,22 +25,16 @@ class SecondStepViewModel {
             return document
         }
     }
-
+    
+    let loginUseCase = LoginUseCase()
     
     func login() async {
-        let bodyRequest = LoginRequest(dni: document, password: password)
-        let service = NetworkService(baseURL: "https://appmobile.tech/api")
-        let endpoint = Endpoint(path: "/auth/login", method: .post, body: bodyRequest)
-        let response = try? await service.request(endpoint: endpoint, responseType: LoginResponse.self)
-        
-        if let response {
+        let result = await loginUseCase.login(document: document, password: password)
+        switch result {
+        case .success:
             succes = true
-            UserDefaults.standard.set(response.usuario.dni, forKey: "dni")
-            UserDefaults.standard.set(response.usuario.nombres, forKey: "name")
-            UserDefaults.standard.set(response.token, forKey: "token")
-        } else {
+        case .failure:
             succes = false
         }
-        
     }
 }
